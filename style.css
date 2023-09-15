@@ -29,8 +29,8 @@ body {
 nav {
   position: fixed;
   z-index: 10;
-  padding: 1.2rem 0;
   width: 100%; /* else it will only take the width of the contents - so justify-content will not work*/
+  padding: 1.2rem;
 }
 
 .nav-container {
@@ -43,7 +43,6 @@ nav {
 .logo /*logo svg has a class called logo*/ {
   color: var(--accent);
   width: clamp(3rem, 10vw, 5rem);
-  display: grid;
 }
 
 /* Tab focus styling */
@@ -60,7 +59,7 @@ nav {
   gap: 1.5rem;
   padding: 1.5rem;
   list-style: none;
-  transition: transform 0.4s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+  /* transition: transform 0.4s cubic-bezier(0.64, 0.04, 0.26, 0.87); */
 }
 
 .nav-link {
@@ -76,8 +75,8 @@ nav {
   display: grid;
   place-items: center;
   padding-inline: 1rem;
-  transition: transform 0.3s cubic-bezier(0.64, 0.04, 0.26, 0.87);
   display: none;
+  transition: transform 0.3s cubic-bezier(0.64, 0.04, 0.26, 0.87);
 }
 
 /* -------- */
@@ -93,6 +92,10 @@ nav {
     text-align: center;
     transform: translate(0, -200%);
     border-bottom: 3px solid var(--accent);
+  }
+
+  .nav-links .activated {
+    transition: transform 0.3s cubic-bezier(0.64, 0.04, 0.26, 0.87);
   }
 
   .btn-menu {
